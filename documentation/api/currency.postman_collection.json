@@ -1,0 +1,197 @@
+{
+	"id": "4a196bcb-72d4-4bcc-acf7-35991dbce449",
+	"name": "currency",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"97090d7b-e020-4f63-94ce-d7503e59d99f",
+		"55f50652-217c-475e-aa38-59bf9d234e73",
+		"3b9a0c7c-29aa-4fdf-97b6-2f7569941fc7",
+		"50e3318e-cafa-454f-9db6-46d21d7916da",
+		"32d219b1-e2f4-4fc7-81a6-97a6bb33b83e",
+		"ab92f580-9a1a-4103-b396-b2cad384d7ed"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "32d219b1-e2f4-4fc7-81a6-97a6bb33b83e",
+			"name": "Retrieve Currency Rate Trends",
+			"url": "localhost:8000/api/v1/currencies/rates/trends?domain=GBP&codomain=JPY",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "domain",
+					"value": "GBP",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "codomain",
+					"value": "JPY",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "3b9a0c7c-29aa-4fdf-97b6-2f7569941fc7",
+			"name": "Retrieve Currency List",
+			"url": "localhost:8000/api/v1/currencies/list/",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "50e3318e-cafa-454f-9db6-46d21d7916da",
+			"name": "Create Currency Rate",
+			"url": "localhost:8000/api/v1/currencies/rates/",
+			"description": "",
+			"data": [
+				{
+					"key": "date",
+					"value": "2019-04-20",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "domain",
+					"value": "GBP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "codomain",
+					"value": "JPY",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "rate",
+					"value": "0.19238491",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "55f50652-217c-475e-aa38-59bf9d234e73",
+			"name": "Create Currency",
+			"url": "localhost:8000/api/v1/currencies/",
+			"description": "",
+			"data": [
+				{
+					"key": "domain",
+					"value": "JPY",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "codomain",
+					"value": "AUD",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "97090d7b-e020-4f63-94ce-d7503e59d99f",
+			"name": "Delete Currency",
+			"url": "localhost:8000/api/v1/currencies?currency_id=1",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "currency_id",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "ab92f580-9a1a-4103-b396-b2cad384d7ed",
+			"name": "Retrieve Currency List with Date",
+			"url": "localhost:8000/api/v1/currencies/list?date=2019-04-20",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "date",
+					"value": "2019-04-20",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}

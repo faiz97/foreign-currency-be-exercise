@@ -1,4 +1,6 @@
+configparser==3.7.4
 Django==2.2
 djangorestframework==3.9.2
+mysqlclient==1.4.2.post1
 pytz==2019.1
 sqlparse==0.3.0

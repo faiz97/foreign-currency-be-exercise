@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'lfch8bmfe@=n7beth1=m(zl2)1g=u%=69-v-%4(yp%w5yc2!&2'
+SECRET_KEY = '$@4pg%vs#(!b%seb)*$&_+(z)wvxc4wrxxcbb+h@h$_^urx2yv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'currencies.apps.CurrenciesConfig',
 ]
 
 MIDDLEWARE = [
@@ -76,11 +78,11 @@ WSGI_APPLICATION = 'api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'currency',
+        'NAME': 'api',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': '127.0.0.1', # Or an IP Address that your DB is hosted on
-        'PORT': '',
+        'HOST': 'db',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
@@ -106,6 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
+DATETIME_FORMAT = '%Y-%m-%d'
 
 LANGUAGE_CODE = 'en-us'
 
